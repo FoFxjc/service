@@ -172,34 +172,34 @@
           </template>
         </el-table-column>
 
-        <el-table-column align="center" label="Views">
+        <el-table-column align="center" label="視聴回数">
           <template slot-scope="scope">
             <span>{{ scope.row.views }}</span>
           </template>
         </el-table-column>
-        <el-table-column align="center" label="Downloads">
+        <el-table-column align="center" label="ダウンロード">
           <template slot-scope="scope">
             <span>{{ scope.row.downloads }}</span>
           </template>
         </el-table-column>
 
-        <el-table-column align="center" label="Price">
+        <el-table-column align="center" label="価額">
           <template slot-scope="scope">
             <span>¥ {{ scope.row.price }}</span>
           </template>
         </el-table-column>
 
         <el-table-column
-          label="Action"
+          label="操作"
           fixed="right"
           width="180"
           align="center"
         >
           <template slot-scope="scope">
             <el-button @click="handleClick(scope.row)" size="mini" type="info"
-              >Detail</el-button
+              >詳細</el-button
             >
-            <el-button size="mini" type="danger">Delete</el-button>
+            <el-button size="mini" type="danger">削除</el-button>
           </template>
         </el-table-column>
       </el-table>
