@@ -16,7 +16,7 @@
               font-size: 16px;
             "
           >
-            Download Chart
+            ダウンロード分析
           </p>
           <el-divider></el-divider>
           <line-chart :chart-data="lineChartData" />
@@ -37,7 +37,7 @@
               font-size: 16px;
             "
           >
-            Satellite APIs Status
+            衛星通信状態確認
           </p>
           <el-divider></el-divider>
           <el-table
@@ -100,7 +100,7 @@
         >
           <el-col :span="8">
             <p style="margin-left: 15px; margin-right: 15px; font-size: 16px">
-              Notification List
+             通知情報
             </p></el-col
           >
           <el-col :offset="9" :span="7">

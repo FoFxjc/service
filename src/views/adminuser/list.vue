@@ -1,6 +1,6 @@
 <template>
   <div class="app-container">
-    <el-card class="box-card"> Admin User List </el-card>
+    <el-card class="box-card"> 管理者ユーザー一覧表 </el-card>
     <el-table
       v-loading="listLoading"
       :data="list"
@@ -53,10 +53,10 @@
       <el-table-column label="Action" width="300" align="center">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)" size="mini" type="info"
-            >Detail</el-button
+            >詳細</el-button
           >
-          <el-button size="mini" type="danger">Delete</el-button>
-          <el-button size="mini" type="warning">Reset Password</el-button>
+          <el-button size="mini" type="danger">削除</el-button>
+          <el-button size="mini" type="warning">パスワード変更</el-button>
         </template>
       </el-table-column>
     </el-table>

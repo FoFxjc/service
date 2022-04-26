@@ -59,7 +59,7 @@
           align="center"
           label="ID"
           width="65"
-          element-loading-text="请给我点时间！"
+          element-loading-text="確認中"
         >
           <template slot-scope="scope">
             <span>{{ scope.row.id }}</span>
@@ -124,7 +124,7 @@
         <el-table-column
           width="480px"
           align="left"
-          label="Title &amp; Description"
+          label="タイトル &amp; 概要"
         >
           <template slot-scope="{ row }">
             <span style="font-weight: bold">{{ row.title }}</span>
@@ -133,7 +133,7 @@
           </template>
         </el-table-column>
 
-        <el-table-column label="Visibility">
+        <el-table-column label="利用可能">
           <template slot-scope="{ row }">
             <i v-if="row.status == 'Private'" class="el-icon-view"></i>
             <i
@@ -157,17 +157,17 @@
             <span
               v-if="scope.row.status == 'Public'"
               style="font-size: 11px; line-height: 8px"
-              >Published</span
+              >公開</span
             >
             <span
               v-if="scope.row.status == 'Private'"
               style="font-size: 11px; line-height: 8px"
-              >Last Modified</span
+              >変更</span
             >
             <span
               v-if="scope.row.status == 'Draft'"
               style="font-size: 11px; line-height: 8px"
-              >Uploaded</span
+              >アップデート</span
             >
           </template>
         </el-table-column>

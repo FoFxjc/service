@@ -5,14 +5,14 @@
       align="center"
       label="ID"
       width="65"
-      element-loading-text="请给我点时间！"
+      element-loading-text="確認中"
     >
       <template slot-scope="scope">
         <span>{{ scope.row.id }}</span>
       </template>
     </el-table-column>
 
-    <el-table-column width="180px" align="center" label="Date">
+    <el-table-column width="180px" align="center" label="データ">
       <template slot-scope="scope">
         <span>{{ scope.row.timestamp | parseTime('{y}-{m}-{d} {h}:{i}') }}</span>
       </template>

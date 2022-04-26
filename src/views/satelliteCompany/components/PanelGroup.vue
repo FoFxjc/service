@@ -6,7 +6,7 @@
           <i class="el-icon-user-solid card-panel-icon"> </i>
         </div>
         <div class="card-panel-description">
-          <div class="card-panel-text">ユーザー</div>
+          <div class="card-panel-text">Users</div>
           <count-to
             :start-val="0"
             :end-val="180"
@@ -22,7 +22,7 @@
           <i class="el-icon-s-custom card-panel-icon"> </i>
         </div>
         <div class="card-panel-description">
-          <div class="card-panel-text">管理者</div>
+          <div class="card-panel-text">Admins</div>
           <count-to
             :start-val="0"
             :end-val="10"
@@ -38,7 +38,7 @@
           <i class="el-icon-video-camera-solid card-panel-icon"> </i>
         </div>
         <div class="card-panel-description">
-          <div class="card-panel-text">リソース</div>
+          <div class="card-panel-text">Resource</div>
           <count-to
             :start-val="0"
             :end-val="1500"
@@ -54,7 +54,7 @@
           <i class="el-icon-video-camera card-panel-icon"> </i>
         </div>
         <div class="card-panel-description">
-          <div class="card-panel-text">データ</div>
+          <div class="card-panel-text">Data</div>
           <count-to
             :start-val="0"
             :end-val="3569"
@@ -73,7 +73,7 @@
           />
         </div>
         <div class="card-panel-description">
-          <div class="card-panel-text">サービス</div>
+          <div class="card-panel-text">Satellite Ltd.</div>
           <count-to
             :start-val="0"
             :end-val="10"
@@ -92,7 +92,7 @@
           />
         </div>
         <div class="card-panel-description">
-          <div class="card-panel-text">衛星</div>
+          <div class="card-panel-text">Satellite</div>
           <count-to
             :start-val="0"
             :end-val="25"

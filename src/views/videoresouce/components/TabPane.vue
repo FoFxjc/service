@@ -19,9 +19,9 @@
         class="filter-item"
         style="width: 130px"
       >
-        <el-option value="All">All</el-option>
-        <el-option value="Public">Live</el-option>
-        <el-option value="Private">Appointment</el-option>
+        <el-option value="All">すべて</el-option>
+        <el-option value="Public">リアルタイム</el-option>
+        <el-option value="Private">予約</el-option>
       </el-select>
       <el-select
         value="S01"
@@ -41,9 +41,9 @@
         class="filter-item"
         style="width: 130px"
       >
-        <el-option value="Shooting">Shooting</el-option>
-        <el-option value="In Appointment">In Appointment</el-option>
-        <el-option value="Finished">Finished</el-option>
+        <el-option value="Shooting">撮影中</el-option>
+        <el-option value="In Appointment">予約</el-option>
+        <el-option value="Finished">完了</el-option>
       </el-select>
       <el-button
         v-waves

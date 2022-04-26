@@ -52,65 +52,56 @@ export const constantRoutes = [
         path: "dashboard",
         name: "Dashboard",
         component: () => import("@/views/dashboard/index"),
-        meta: { title: "Dashboard", icon: "dashboard" },
+        meta: { title: "ダッシュボード", icon: "dashboard" },
       },
     ],
   },
 
   {
-    path: "/statusdashboard",
+    path: "/plan",
     component: Layout,
-    redirect: "/statusdashboard",
+    redirect: "/plan/list",
+    name: "Satellite plan",
+    meta: {
+      title: "運用計画立案",
+      icon: "fa-briefcase",
+    },
     children: [
+      // {
+      //   path: "table",
+      //   name: "Table",
+      //   component: () => import("@/views/satelliteCompany/index"),
+      //   meta: { title: "一覧表", icon: "table" },
+      // },
       {
-        path: "statusdashboard",
-        name: "Status Dashboard",
-        component: () => import("@/views/notification/index"),
-        meta: { title: "Status Dashboard", icon: "el-icon-s-management" },
+        path: "tree",
+        name: "Add Company",
+        component: () => import("@/views/satelliteCompany/form1"),
+        meta: { title: "長期運用計画", icon: "form" },
       },
-    ],
-  },
-
-  {
-    path: "/example",
-    component: Layout,
-    redirect: "/example/table",
-    name: "Example",
-    meta: { title: "Account", icon: "el-icon-user" },
-    children: [
       {
-        path: "table",
-        name: "Table",
-        component: () => import("@/views/table/index"),
-        meta: { title: "List", icon: "table" },
+        path: "tree1",
+        name: "Add Company",
+        component: () => import("@/views/satelliteCompany/form2"),
+        meta: { title: "通信パス確認", icon: "form" },
+      },
+      {
+        path: "tree2",
+        name: "Add Company",
+        component: () => import("@/views/satelliteCompany/form3"),
+        meta: { title: "運用計画確認", icon: "form" },
       },
       {
         path: "tree",
-        name: "Add Account",
-        component: () => import("@/views/form/index"),
-        meta: { title: "Add Account", icon: "form" },
-      },
-    ],
-  },
-
-  {
-    path: "/adminuser",
-    component: Layout,
-    redirect: "/adminuser/table",
-    name: "AdminUser",
-    meta: { title: "Admin Users", icon: "el-icon-s-custom" },
-    children: [
-      {
-        path: "table",
-        name: "List",
-        component: () => import("@/views/adminuser/list"),
-        meta: { title: "List", icon: "table" },
+        name: "Add Company",
+        component: () => import("@/views/satelliteCompany/form"),
+        meta: { title: "再立案作成", icon: "form" },
       },
       {
         path: "tree",
-        name: "Add Admin",
-        component: () => import("@/views/adminuser/form"),
-        meta: { title: "Add Admin User", icon: "form" },
+        name: "Add Company",
+        component: () => import("@/views/satelliteCompany/form"),
+        meta: { title: "ダウンリンク計画", icon: "form" },
       },
     ],
   },
@@ -121,7 +112,7 @@ export const constantRoutes = [
     redirect: "/satellitecompany/list",
     name: "Satellite Company",
     meta: {
-      title: "Satellite Company",
+      title: "地上局",
       icon: "fa-briefcase",
     },
     children: [
@@ -129,35 +120,81 @@ export const constantRoutes = [
         path: "table",
         name: "Table",
         component: () => import("@/views/satelliteCompany/index"),
-        meta: { title: "List", icon: "table" },
+        meta: { title: "一覧表", icon: "table" },
       },
       {
         path: "tree",
         name: "Add Company",
         component: () => import("@/views/satelliteCompany/form"),
-        meta: { title: "Add Company", icon: "form" },
+        meta: { title: "新規追加", icon: "form" },
       },
     ],
   },
+
+  {
+    path: "/example",
+    component: Layout,
+    redirect: "/example/table",
+    name: "Example",
+    meta: { title: "ユーザー管理", icon: "el-icon-user" },
+    children: [
+      {
+        path: "table",
+        name: "Table",
+        component: () => import("@/views/table/index"),
+        meta: { title: "一覧表", icon: "table" },
+      },
+      {
+        path: "tree",
+        name: "Add Account",
+        component: () => import("@/views/form/index"),
+        meta: { title: "新規アカウント", icon: "form" },
+      },
+    ],
+  },
+
+  {
+    path: "/adminuser",
+    component: Layout,
+    redirect: "/adminuser/table",
+    name: "AdminUser",
+    meta: { title: "サービス運営者管理", icon: "el-icon-s-custom" },
+    children: [
+      {
+        path: "table",
+        name: "List",
+        component: () => import("@/views/adminuser/list"),
+        meta: { title: "一覧表", icon: "table" },
+      },
+      {
+        path: "tree",
+        name: "Add Admin",
+        component: () => import("@/views/adminuser/form"),
+        meta: { title: "新規アカウント", icon: "form" },
+      },
+    ],
+  },
+
+
 
   {
     path: "/satellite",
     component: Layout,
     redirect: "/satellite/list",
     name: "Satellite",
-    meta: { title: "Satellite", icon: "fa-satellite" },
+    meta: { title: "衛星", icon: "fa-satellite" },
     children: [
       {
         path: "table",
         name: "Table",
         component: () => import("@/views/satellite/index"),
-        meta: { title: "List", icon: "table" },
+        meta: { title: "一覧表", icon: "table" },
       },
       {
         path: "tree",
         name: "Add Satellite",
         component: () => import("@/views/satellite/form"),
-        meta: { title: "Add Satellite", icon: "form" },
+        meta: { title: "新規追加", icon: "form" },
       },
     ],
   },
@@ -167,19 +204,19 @@ export const constantRoutes = [
     component: Layout,
     redirect: "/videoresouce/list",
     name: "Video Resource",
-    meta: { title: "Video Resource", icon: "el-icon-video-camera-solid" },
+    meta: { title: "撮影データ管理", icon: "el-icon-video-camera-solid" },
     children: [
       {
         path: "table",
         name: "Table",
         component: () => import("@/views/videoresouce/index"),
-        meta: { title: "List", icon: "table" },
+        meta: { title: "一覧表", icon: "table" },
       },
       {
         path: "tree",
         name: "Video Detail",
         component: () => import("@/views/videoresouce/detail"),
-        meta: { title: "Video Detail", icon: "form" },
+        meta: { title: "撮影詳細", icon: "form" },
       },
     ],
   },
@@ -208,6 +245,88 @@ export const constantRoutes = [
         name: "Edit Video",
         component: () => import("@/views/videodata/edit"),
         meta: { title: "Edit Video Data", icon: "form" },
+      },
+    ],
+  },
+  {
+    path: "/statusdashboard",
+    component: Layout,
+    redirect: "/statusdashboard",
+    children: [
+      {
+        path: "statusdashboard",
+        name: "Status Dashboard",
+        component: () => import("@/views/notification/index"),
+        meta: { title: "監視", icon: "el-icon-s-management" },
+      },
+    ],
+  },
+
+  {
+    path: "/statusdashboard",
+    component: Layout,
+    redirect: "/statusdashboard",
+    children: [
+      {
+        path: "statusdashboard",
+        name: "Status Dashboard",
+        component: () => import("@/views/notification/index"),
+        meta: { title: "保守メンテナンス", icon: "el-icon-s-management" },
+      },
+    ],
+  },
+
+  {
+    path: "/statusdashboard",
+    component: Layout,
+    redirect: "/statusdashboard",
+    children: [
+      {
+        path: "statusdashboard",
+        name: "Status Dashboard",
+        component: () => import("@/views/notification/index"),
+        meta: { title: "WEBサイト運営", icon: "el-icon-s-management" },
+      },
+    ],
+  },
+
+  {
+    path: "/statusdashboard",
+    component: Layout,
+    redirect: "/statusdashboard",
+    children: [
+      {
+        path: "statusdashboard",
+        name: "Status Dashboard",
+        component: () => import("@/views/notification/index"),
+        meta: { title: "利用料金の請求", icon: "el-icon-s-management" },
+      },
+    ],
+  },
+  {
+    path: "/statusdashboard",
+    component: Layout,
+    redirect: "/statusdashboard",
+    children: [
+      {
+        path: "statusdashboard",
+        name: "Status Dashboard",
+        component: () => import("@/views/notification/index"),
+        meta: { title: "個人情報分析", icon: "el-icon-s-management" },
+      },
+    ],
+  },
+
+  {
+    path: "/statusdashboard",
+    component: Layout,
+    redirect: "/statusdashboard",
+    children: [
+      {
+        path: "statusdashboard",
+        name: "Status Dashboard",
+        component: () => import("@/views/notification/index"),
+        meta: { title: "カスタマーサポート", icon: "el-icon-s-management" },
       },
     ],
   },

@@ -9,7 +9,7 @@
       label-position="left"
     >
       <div class="title-container">
-        <h3 class="title">Service Application Login</h3>
+        <h3 class="title">サービス運営管理ログイン</h3>
       </div>
 
       <el-form-item prop="username">
@@ -54,12 +54,12 @@
         type="primary"
         style="width: 100%; margin-bottom: 30px"
         @click.native.prevent="handleLogin"
-        >Login</el-button
+        >ログイン</el-button
       >
 
       <div class="tips">
-        <span style="margin-right: 20px">username: admin</span>
-        <span> password: any</span>
+        <span style="margin-right: 20px">テストユーザー: admin</span>
+        <span> テストパスワード: any</span>
       </div>
     </el-form>
   </div>

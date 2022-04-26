@@ -17,7 +17,7 @@
               font-size: 16px;
             "
           >
-            Video Resource
+           撮影データ
           </p>
           <el-divider></el-divider>
           <el-table
@@ -31,7 +31,7 @@
               align="center"
               label="ID"
               width="65"
-              element-loading-text="请给我点时间！"
+              element-loading-text="確認中"
             >
               <template slot-scope="scope">
                 <el-button type="text">{{ scope.row.id }}</el-button>
@@ -87,7 +87,7 @@
               </template>
             </el-table-column>
 
-            <el-table-column align="center" label="Type">
+            <el-table-column align="center" label="種類">
               <template slot-scope="{ row }">
                 <el-tag
                   v-if="row.type == 'Appointment'"
@@ -105,7 +105,7 @@
               </template>
             </el-table-column>
 
-            <el-table-column width="300px" align="center" label="Date">
+            <el-table-column width="300px" align="center" label="データ">
               <template slot-scope="scope">
                 <span style="font-weight: bold"
                   >2022/03/18 17:00 - 2022/03/18 18:00</span
@@ -114,17 +114,17 @@
                 <span
                   v-if="scope.row.type == 'Appointment'"
                   style="font-size: 11px; line-height: 8px"
-                  >Appointment Datetime</span
+                  >予約日付</span
                 >
                 <span
                   v-if="scope.row.type == 'Live'"
                   style="font-size: 11px; line-height: 8px"
-                  >Live Datetime</span
+                  >リアルタイム</span
                 >
               </template>
             </el-table-column>
 
-            <el-table-column align="center" label="Status">
+            <el-table-column align="center" label="状態確認">
               <template slot-scope="scope">
                 <i
                   v-if="scope.row.status == 'Finished'"
@@ -157,7 +157,7 @@
                 >
               </template>
             </el-table-column>
-            <el-table-column align="center" label="Satellite">
+            <el-table-column align="center" label="衛星名前">
               <template slot-scope="scope">
                 <span>{{ scope.row.satellite }}</span>
               </template>
@@ -180,7 +180,7 @@
               font-size: 16px;
             "
           >
-            Video Data
+            撮影データ
           </p>
           <el-divider></el-divider>
           <el-table
@@ -194,7 +194,7 @@
               align="center"
               label="ID"
               width="65"
-              element-loading-text="请给我点时间！"
+              element-loading-text="確認中"
             >
               <template slot-scope="scope">
                 <el-button type="text">{{ scope.row.id }}</el-button>
@@ -263,7 +263,7 @@
             <el-table-column
               width="480px"
               align="left"
-              label="Title &amp; Description"
+              label="タイトル &amp; 概要"
             >
               <template slot-scope="{ row }">
                 <span>{{ row.title }}</span>
@@ -287,24 +287,24 @@
               </template>
             </el-table-column>
 
-            <el-table-column width="110px" align="left" label="Date">
+            <el-table-column width="110px" align="left" label="日付">
               <template slot-scope="scope">
                 <span style="font-weight: bold">{{ scope.row.date_time }}</span>
                 <br />
                 <span
                   v-if="scope.row.status == 'Public'"
                   style="font-size: 11px; line-height: 8px"
-                  >Published</span
+                  >公開</span
                 >
                 <span
                   v-if="scope.row.status == 'Private'"
                   style="font-size: 11px; line-height: 8px"
-                  >Last Modified</span
+                  >変更</span
                 >
                 <span
                   v-if="scope.row.status == 'Draft'"
                   style="font-size: 11px; line-height: 8px"
-                  >Uploaded</span
+                  >アップデート</span
                 >
               </template>
             </el-table-column>
