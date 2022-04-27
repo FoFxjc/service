@@ -52,7 +52,7 @@
         icon="el-icon-search"
         @click="handleFilter"
       >
-        Search
+        検索
       </el-button>
       <el-button
         class="filter-item"
@@ -61,7 +61,7 @@
         icon="el-icon-circle-plus"
         @click="handleCreate"
       >
-        Add Resource
+        新規追加
       </el-button>
     </el-card>
     <el-card
@@ -81,14 +81,14 @@
           align="center"
           label="ID"
           width="65"
-          element-loading-text="请给我点时间！"
+          element-loading-text="確認中"
         >
           <template slot-scope="scope">
             <span>{{ scope.row.id }}</span>
           </template>
         </el-table-column>
 
-        <el-table-column v-if="type == 'Video'" align="center" label="Video">
+        <el-table-column v-if="type == 'Video'" align="center" label="ビデオ">
           <template slot-scope="scope">
             <div>
               <video
@@ -98,8 +98,8 @@
                 controls="controls"
                 style="width: 100%; height: 100%"
               />
-              <span v-if="scope.row.status == 'Pending'">No Video</span>
-              <span v-if="scope.row.status == 'Shooting'">No Video</span>
+              <span v-if="scope.row.status == 'Pending'">データ存在しません</span>
+              <span v-if="scope.row.status == 'Shooting'">データ存在しません</span>
             </div>
           </template>
         </el-table-column>
@@ -107,7 +107,7 @@
         <el-table-column
           v-if="type == 'Picture'"
           align="center"
-          label="Picture"
+          label="写真"
         >
           <template slot-scope="scope">
             <div>
@@ -133,13 +133,13 @@
           </template>
         </el-table-column>
 
-        <el-table-column align="center" label="User ID">
+        <el-table-column align="center" label="ユーザー ID">
           <template slot-scope="{ row }">
             <span>{{ row.user_id }}</span>
           </template>
         </el-table-column>
 
-        <el-table-column align="center" label="Type">
+        <el-table-column align="center" label="種類">
           <template slot-scope="{ row }">
             <el-tag v-if="row.type == 'Appointment'" style="font-weight: bold">
               {{ row.type }}</el-tag
@@ -154,7 +154,7 @@
           </template>
         </el-table-column>
 
-        <el-table-column width="300px" align="center" label="Date">
+        <el-table-column width="300px" align="center" label="日付">
           <template slot-scope="scope">
             <span style="font-weight: bold"
               >2022/03/18 17:00 - 2022/03/18 18:00</span
@@ -163,17 +163,17 @@
             <span
               v-if="scope.row.type == 'Appointment'"
               style="font-size: 11px; line-height: 8px"
-              >Appointment Datetime</span
+              >予約時間</span
             >
             <span
               v-if="scope.row.type == 'Live'"
               style="font-size: 11px; line-height: 8px"
-              >Live Datetime</span
+              >リアルタイム</span
             >
           </template>
         </el-table-column>
 
-        <el-table-column align="center" label="Status">
+        <el-table-column align="center" label="状態">
           <template slot-scope="scope">
             <i
               v-if="scope.row.status == 'Finished'"
@@ -200,13 +200,13 @@
             >
           </template>
         </el-table-column>
-        <el-table-column align="center" label="Satellite">
+        <el-table-column align="center" label="衛星">
           <template slot-scope="scope">
             <span>{{ scope.row.satellite }}</span>
           </template>
         </el-table-column>
 
-        <el-table-column align="center" label="Cost">
+        <el-table-column align="center" label="費用">
           <template slot-scope="scope">
             <span v-if="scope.row.status == 'Finished'"
               >¥ {{ scope.row.price }}</span
@@ -215,7 +215,7 @@
         </el-table-column>
 
         <el-table-column
-          label="Action"
+          label="操作"
           fixed="right"
           width="180"
           align="center"
@@ -224,7 +224,7 @@
             <el-button @click="handleClick(scope.row)" size="mini" type="info"
               >Detail</el-button
             >
-            <el-button size="mini" type="danger">Delete</el-button>
+            <el-button size="mini" type="danger">削除</el-button>
           </template>
         </el-table-column>
       </el-table>

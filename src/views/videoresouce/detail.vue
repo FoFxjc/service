@@ -11,7 +11,7 @@
               font-size: 16px;
             "
           >
-            Basic Info
+            基本情報
           </p>
           <el-divider></el-divider>
           <div style="padding: 0px 10px 20px 20px; margin-top: 10px">
@@ -25,15 +25,15 @@
             </div>
             <div class="data_desc data_field" style="margin-top: 42px">
               <p class="data_field_label">
-                Type:
-                <el-tag style="margin-left: 10px"> Appointment </el-tag>
+                種類:
+                <el-tag style="margin-left: 10px"> 予約 </el-tag>
               </p>
             </div>
             <div class="data_number data_field">
               <p class="data_field_label">
-                Status:
+                状態:
                 <el-tag type="warning" style="margin-left: 10px">
-                  Pending
+                  通信中
                 </el-tag>
               </p>
             </div>
@@ -49,7 +49,7 @@
               align-items: center;
             "
           >
-            <el-col :span="8"> <p style="font-size: 16px">User Data</p></el-col>
+            <el-col :span="8"> <p style="font-size: 16px">ユーザーデータ</p></el-col>
             <el-col :offset="12" :span="2">
               <el-button
                 type="danger"
@@ -69,15 +69,15 @@
             "
           >
             <div class="data_title data_field">
-              <p class="data_field_label">User ID:</p>
+              <p class="data_field_label">ユーザー ID:</p>
               <p class="data_field_content">uid8829293</p>
             </div>
             <div class="data_desc data_field" style="margin-top: 42px">
-              <p class="data_field_label">Nick Name:</p>
+              <p class="data_field_label">ニックネーム:</p>
               <p class="data_field_content">Peter</p>
             </div>
             <div class="data_number data_field">
-              <p class="data_field_label">Email:</p>
+              <p class="data_field_label">メール:</p>
               <p class="data_field_content">
                 <el-button type="text" style="margin-top: -10px"
                   >e.cmpylowm@mzcufvkusx.is</el-button
@@ -95,16 +95,16 @@
               font-size: 16px;
             "
           >
-            Action logs
+            操作ログ
           </p>
           <el-divider></el-divider>
           <div style="padding: 0px 10px 10px 10px; margin-top: -15px">
             <el-table :data="tableData" style="font-size: 12px">
-              <el-table-column prop="date" label="Datetime" width="90">
+              <el-table-column prop="date" label="時間" width="90">
               </el-table-column>
-              <el-table-column prop="name" label="User" width="90">
+              <el-table-column prop="name" label="ユーザー" width="90">
               </el-table-column>
-              <el-table-column prop="address" label="Action" width="120">
+              <el-table-column prop="address" label="操作" width="120">
               </el-table-column>
             </el-table>
           </div>
@@ -123,12 +123,11 @@
             "
           >
             <el-col :span="8">
-              <p style="font-size: 16px">Shooting Time</p></el-col
+              <p style="font-size: 16px">撮影時間</p></el-col
             >
             <el-col :offset="11" :span="3">
               <el-button type="primary">
-                <i class="el-icon-circle-plus-outline"> </i> New Shooting
-                Time</el-button
+                <i class="el-icon-circle-plus-outline"> </i> 新規撮影</el-button
               >
             </el-col>
           </el-row>
@@ -142,13 +141,13 @@
             >
               <el-table-column prop="id" label="ID" width="60" align="center">
               </el-table-column>
-              <el-table-column prop="start_time" label="Start Time">
+              <el-table-column prop="start_time" label="開始時間">
               </el-table-column>
-              <el-table-column prop="end_time" label="End Time">
+              <el-table-column prop="end_time" label="終了時間">
               </el-table-column>
-              <el-table-column prop="satellite" label="Satellite">
+              <el-table-column prop="satellite" label="衛星">
               </el-table-column>
-              <el-table-column prop="status" label="Status" align="center">
+              <el-table-column prop="status" label="状態" align="center">
                 <template slot-scope="{ row }">
                   <el-tag
                     v-if="row.status == 'Finished'"
@@ -173,7 +172,7 @@
                 </template>
               </el-table-column>
               <el-table-column
-                label="Action"
+                label="操作"
                 fixed="right"
                 width="180"
                 align="center"
@@ -183,7 +182,7 @@
                     v-if="scope.row.status == 'Pending'"
                     size="mini"
                     type="danger"
-                    >Delete</el-button
+                    >削除</el-button
                   >
                 </template>
               </el-table-column>
@@ -199,7 +198,7 @@
               font-size: 16px;
             "
           >
-            Video List
+            ビデオ一覧表
           </p>
           <el-divider></el-divider>
           <div style="padding: 0px 10px 10px 10px; margin-top: -15px">
@@ -217,7 +216,7 @@
                 align="center"
                 label="ID"
                 width="65"
-                element-loading-text="请给我点时间！"
+                element-loading-text="確認中"
               >
                 <template slot-scope="scope">
                   <span>{{ scope.row.id }}</span>
@@ -233,7 +232,7 @@
               <el-table-column
                 v-if="type == 'Video'"
                 align="center"
-                label="Video"
+                label="ビデオ"
               >
                 <template slot-scope="scope">
                   <div>
@@ -250,7 +249,7 @@
               <el-table-column
                 v-if="type == 'Picture'"
                 align="center"
-                label="Picture"
+                label="写真"
               >
                 <template slot-scope="scope">
                   <div>
@@ -263,14 +262,14 @@
                 </template>
               </el-table-column>
 
-              <el-table-column align="center" label="Download" width="90">
+              <el-table-column align="center" label="ダウンロード数" width="90">
                 <template slot-scope="scope">
                   <span>{{ scope.row.isDownload }}</span>
                 </template>
               </el-table-column>
 
               <el-table-column
-                label="Action"
+                label="操作"
                 fixed="right"
                 width="180"
                 align="center"
@@ -280,9 +279,9 @@
                     @click="handleClick(scope.row)"
                     size="mini"
                     type="info"
-                    >Detail</el-button
+                    >詳細</el-button
                   >
-                  <el-button size="mini" type="danger">Delete</el-button>
+                  <el-button size="mini" type="danger">削除</el-button>
                 </template>
               </el-table-column>
             </el-table>
@@ -297,31 +296,31 @@
               font-size: 16px;
             "
           >
-            Cost Bill
+            費用
           </p>
           <el-divider></el-divider>
           <div style="padding: 0px 10px 20px 20px; margin-top: 10px">
             <el-descriptions class="margin-top" :column="3" :size="size" border>
               <el-descriptions-item>
-                <template slot="label"> Payment </template>
+                <template slot="label"> 支払 </template>
                 Visa
               </el-descriptions-item>
               <el-descriptions-item>
-                <template slot="label"> Payment Status </template>
+                <template slot="label">支払状態 </template>
                 Done
               </el-descriptions-item>
               <el-descriptions-item>
-                <template slot="label"> Video Number </template>
+                <template slot="label"> ビデオ番号 </template>
                 5
               </el-descriptions-item>
               <el-descriptions-item>
-                <template slot="label"> Total Prise </template>
+                <template slot="label"> 合計金額 </template>
                 ¥ 120000
               </el-descriptions-item>
               <el-descriptions-item>
                 <template slot="label">
                   <i class="el-icon-tickets"></i>
-                  Bill
+                  見積書
                 </template>
                 <el-button type="text">Bill 201030232.pdf</el-button>
               </el-descriptions-item>

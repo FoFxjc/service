@@ -64,7 +64,7 @@
           </p>
           <el-divider></el-divider>
           <div v-if="value1">
-            <el-form-item label="Video" style="width: 50%">
+            <el-form-item label="ビデオ" style="width: 50%">
               <el-upload
                 class="upload-demo"
                 drag
@@ -76,14 +76,14 @@
                   class="el-upload__text"
                   style="font-weight: normal; font-size: 14px"
                 >
-                  Drug and Drop here, or <em>Click</em>
+                  アップロード <em></em>
                 </div>
                 <div
                   class="el-upload__tip"
                   style="font-weight: normal; font-size: 14px"
                   slot="tip"
                 >
-                  Only can upload .mp4 .mov
+                  拡張子対応.mp4 .mov
                 </div>
               </el-upload>
             </el-form-item>
@@ -99,7 +99,7 @@
               >
                 <el-button size="small" type="primary">アップロード</el-button>
                 <div slot="tip" class="el-upload__tip">
-                  Only can upload .jpeg .png
+                  拡張子対応 .jpeg .png
                 </div>
               </el-upload>
             </el-form-item>
@@ -153,7 +153,7 @@
                 font-size: 16px;
               "
             >
-              Price Info
+              金額
             </p>
             <el-divider></el-divider>
             <el-form-item label="Price" style="width: 30%">
@@ -167,8 +167,8 @@
       <el-row :gutter="10">
         <el-col :offset="17" :span="7">
           <el-form-item>
-            <el-button type="primary" @click="onSubmit">Create</el-button>
-            <el-button @click="onCancel">Cancel</el-button>
+            <el-button type="primary" @click="onSubmit">作成</el-button>
+            <el-button @click="onCancel">キャンセル</el-button>
           </el-form-item>
         </el-col>
       </el-row>

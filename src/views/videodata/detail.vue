@@ -11,18 +11,18 @@
           />
           <div class="bottom">
             <div class="data_title data_field">
-              <p class="data_field_label">Title:</p>
+              <p class="data_field_label">タイトル:</p>
               <p class="data_field_content">Yijlivnk Kvmco Scipjihzj</p>
             </div>
             <div class="data_desc data_field">
-              <p class="data_field_label">Description:</p>
+              <p class="data_field_label">概要:</p>
               <p class="data_field_content">
                 Shshpcwt omyf gwijpeax pedfxcjbn anmm jidkpv gejveojay wuvdkanj
                 tbkvdg bugibiq ilrgsbcibv bdxlilnjq ozimd zpqyaqg gavxz.
               </p>
             </div>
             <div class="data_number data_field">
-              <p class="data_field_label">File name:</p>
+              <p class="data_field_label">ファイル名:</p>
               <p class="data_field_content">
                 <el-button style="margin-top: -10px" type="text"
                   >milkyway01.mp4</el-button
@@ -30,13 +30,13 @@
               </p>
             </div>
             <div class="data_desc data_field" style="margin-top: 30px">
-              <p class="data_field_label">Visibility:</p>
+              <p class="data_field_label">利用可:</p>
               <p
                 class="data_field_content"
                 style="font-size: 13px; margin-top: 20px"
               >
                 <i class="el-icon-success" style="color: green"></i>
-                <span> Public</span>
+                <span> 公開</span>
               </p>
             </div>
           </div>
@@ -50,15 +50,15 @@
               font-size: 16px;
             "
           >
-            Action logs
+            操作ログ
           </p>
           <el-divider></el-divider>
           <div style="padding: 0px 10px 10px 10px; margin-top: -15px">
             <el-table :data="tableData" style="font-size: 12px">
-              <el-table-column prop="date" label="Datetime"> </el-table-column>
-              <el-table-column prop="name" label="User" width="90">
+              <el-table-column prop="date" label="日付"> </el-table-column>
+              <el-table-column prop="name" label="ユーザー" width="90">
               </el-table-column>
-              <el-table-column prop="address" label="Action" width="120">
+              <el-table-column prop="address" label="操作" width="120">
               </el-table-column>
             </el-table>
           </div>
@@ -69,7 +69,7 @@
           class="box-card"
           :body-style="{ padding: '5px 20px 10px 20px' }"
         >
-          <p style="margin-bottom: -10px; font-size: 18px">Thumbnails</p>
+          <p style="margin-bottom: -10px; font-size: 18px">概要図</p>
           <el-divider></el-divider>
           <el-carousel :interval="4000" type="card" height="200px">
             <el-carousel-item v-for="item in 6" :key="item">
@@ -88,7 +88,7 @@
           <div class="view_chart" style="background: #fff">
             <div style="display: flex; justify-content: flex-end">
               <p style="margin-bottom: -10px; font-size: 18px">
-                Current Price:
+                費用:
                 <span style="color: #e6a23c">¥ 3000</span>
               </p>
             </div>
@@ -110,11 +110,11 @@
               style="width: 100%"
               height="250"
             >
-              <el-table-column fixed prop="date" label="Date">
+              <el-table-column fixed prop="date" label="日付">
               </el-table-column>
-              <el-table-column prop="name" label="User ID"> </el-table-column>
-              <el-table-column prop="province" label="Price"> </el-table-column>
-              <el-table-column prop="city" label="Type"> </el-table-column>
+              <el-table-column prop="name" label="ユーザー ID"> </el-table-column>
+              <el-table-column prop="province" label="単価"> </el-table-column>
+              <el-table-column prop="city" label="種類"> </el-table-column>
             </el-table>
           </div>
         </el-card>
@@ -183,7 +183,7 @@ export default {
           name: "User001",
           province: "",
           city: "View",
-          address: "上海市普陀区金沙江路 1518 弄",
+          address: "",
           zip: 200333,
         },
         {
@@ -191,7 +191,7 @@ export default {
           name: "User101",
           province: "",
           city: "View",
-          address: "上海市普陀区金沙江路 1518 弄",
+          address: "",
           zip: 200333,
         },
         {
@@ -199,7 +199,7 @@ export default {
           name: "User401",
           province: "",
           city: "View",
-          address: "上海市普陀区金沙江路 1518 弄",
+          address: "",
           zip: 200333,
         },
         {
@@ -207,33 +207,10 @@ export default {
           name: "User301",
           province: "¥ 4500",
           city: "Download",
-          address: "上海市普陀区金沙江路 1518 弄",
+          address: "",
           zip: 200333,
         },
-        {
-          date: "2016-05-08",
-          name: "User201",
-          province: "¥ 4500",
-          city: "Download",
-          address: "上海市普陀区金沙江路 1518 弄",
-          zip: 200333,
-        },
-        {
-          date: "2016-05-06",
-          name: "User101",
-          province: "¥ 3000",
-          city: "Download",
-          address: "上海市普陀区金沙江路 1518 弄",
-          zip: 200333,
-        },
-        {
-          date: "2016-05-07",
-          name: "User011",
-          province: "¥ 3000",
-          city: "Download",
-          address: "上海市普陀区金沙江路 1518 弄",
-          zip: 200333,
-        },
+
       ],
     };
   },
