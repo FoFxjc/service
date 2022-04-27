@@ -1,7 +1,6 @@
 <template>
   <div class="app-container">
-        <el-row :gutter="10">
-
+    <el-row :gutter="10">
       <el-col :span="12">
         <el-card
           :body-style="{ padding: '5px 5px 10px 5px' }"
@@ -67,7 +66,6 @@
 
 <script>
 export default {
-
   data() {
     return {
       list: null,
@@ -78,10 +76,24 @@ export default {
         sort: "+id",
       },
       loading: false,
-      stlist: null,
+      stlist: [
+        {
+          id: "650000200002188519",
+          name: "2e2D84",
+          email: "j.lbthdhd@hgkvx.bi",
+          api_url: "http://uvkqz.tv/uivgmh",
+          fromNowOn: 1,
+          now: "2022-04-27",
+          ping: 105,
+          status: "Offline",
+          company_name: "Edward Ltd.",
+          register_time: "2022-03-26",
+        },
+      ],
     };
   },
-
+  created() {},
+  methods: {},
 };
 </script>
 
