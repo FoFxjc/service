@@ -14,21 +14,21 @@
           {{ scope.$index }}
         </template>
       </el-table-column>
-      <el-table-column label="名前" align="center">
+      <!-- <el-table-column label="名前" align="center">
         <template slot-scope="scope">
           {{ scope.row.name }}
         </template>
-      </el-table-column>
+      </el-table-column> -->
       <el-table-column label="ニックネーム" align="center">
         <template slot-scope="scope">
           <span>{{ scope.row.nickname }}</span>
         </template>
       </el-table-column>
-      <el-table-column label="メール" align="center">
+      <!-- <el-table-column label="メール" align="center">
         <template slot-scope="scope">
           {{ scope.row.email }}
         </template>
-      </el-table-column>
+      </el-table-column> -->
       <el-table-column
         class-name="status-col"
         label="ロール"
@@ -56,7 +56,7 @@
             >詳細</el-button
           >
           <el-button size="mini" type="danger">削除</el-button>
-          <el-button size="mini" type="warning">パスワード変更</el-button>
+          <!-- <el-button size="mini" type="warning">パスワード変更</el-button> -->
         </template>
       </el-table-column>
     </el-table>

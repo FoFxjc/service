@@ -10,6 +10,9 @@
       <el-form-item label="メール" style="width: 50%">
         <el-input v-model="form.name" />
       </el-form-item>
+      <el-form-item label="ロール" style="width: 50%">
+        <el-input v-model="form.name" />
+      </el-form-item>
       <el-form-item>
         <el-button type="primary" @click="onSubmit">作成</el-button>
         <el-button @click="onCancel">キャンセル</el-button>

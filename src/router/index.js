@@ -144,12 +144,12 @@ export const constantRoutes = [
         component: () => import("@/views/table/index"),
         meta: { title: "一覧表", icon: "table" },
       },
-      {
-        path: "tree",
-        name: "Add Account",
-        component: () => import("@/views/form/index"),
-        meta: { title: "新規アカウント", icon: "form" },
-      },
+      // {
+      //   path: "tree",
+      //   name: "Add Account",
+      //   component: () => import("@/views/form/index"),
+      //   meta: { title: "新規アカウント", icon: "form" },
+      // },
     ],
   },
 
@@ -284,7 +284,7 @@ export const constantRoutes = [
       {
         path: "statusdashboard",
         name: "Status Dashboard",
-        component: () => import("@/views/notification/index"),
+        component: () => import("@/views/satelliteCompany/form"),
         meta: { title: "WEBサイト運営", icon: "el-icon-s-management" },
       },
     ],
