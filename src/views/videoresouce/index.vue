@@ -40,8 +40,8 @@ export default {
   data() {
     return {
       tabMapOptions: [
-        { label: "Video", key: "Video" },
-        { label: "Picture", key: "Picture" },
+        { label: "ビデオ", key: "Video" },
+        { label: "写真", key: "Picture" },
       ],
       activeName: "Video",
       createdTimes: 0,

@@ -1,22 +1,16 @@
 <template>
   <div class="app-container">
     <el-form ref="form" :model="form" label-width="120px">
-      <el-form-item label="User name" style="width: 50%">
+      <el-form-item label="ユーザー名" style="width: 50%">
         <el-input v-model="form.name" />
       </el-form-item>
-      <el-form-item label="Gender">
-        <el-select v-model="form.region">
-          <el-option label="Zone one" value="Male" />
-          <el-option label="Zone two" value="Female" />
-        </el-select>
-      </el-form-item>
-      <el-form-item label="Nick name" style="width: 50%">
+      <el-form-item label="ニックネーム" style="width: 50%">
         <el-input v-model="form.name" />
       </el-form-item>
-      <el-form-item label="Email" style="width: 50%">
+      <el-form-item label="メール" style="width: 50%">
         <el-input v-model="form.name" />
       </el-form-item>
-      <el-form-item label="Birthday time">
+      <el-form-item label="生年月日">
         <el-col :span="11">
           <el-date-picker v-model="form.date1" type="date" style="width: 50%" />
         </el-col>

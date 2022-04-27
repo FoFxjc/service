@@ -14,24 +14,24 @@
           {{ scope.$index }}
         </template>
       </el-table-column>
-      <el-table-column label="Name" align="center">
+      <el-table-column label="名前" align="center">
         <template slot-scope="scope">
           {{ scope.row.name }}
         </template>
       </el-table-column>
-      <el-table-column label="Nickname" align="center">
+      <el-table-column label="ニックネーム" align="center">
         <template slot-scope="scope">
           <span>{{ scope.row.nickname }}</span>
         </template>
       </el-table-column>
-      <el-table-column label="Email" align="center">
+      <el-table-column label="メール" align="center">
         <template slot-scope="scope">
           {{ scope.row.email }}
         </template>
       </el-table-column>
       <el-table-column
         class-name="status-col"
-        label="Role"
+        label="ロール"
         width="110"
         align="center"
       >
@@ -42,7 +42,7 @@
       <el-table-column
         align="center"
         prop="created_at"
-        label="Register"
+        label="登録日"
         width="200"
       >
         <template slot-scope="scope">
@@ -50,7 +50,7 @@
           <span>{{ scope.row.register_time }}</span>
         </template>
       </el-table-column>
-      <el-table-column label="Action" width="300" align="center">
+      <el-table-column label="操作" width="300" align="center">
         <template slot-scope="scope">
           <el-button @click="handleClick(scope.row)" size="mini" type="info"
             >詳細</el-button

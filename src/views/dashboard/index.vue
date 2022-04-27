@@ -41,7 +41,7 @@
             <el-table-column
               v-if="type == 'Video'"
               align="center"
-              label="Video"
+              label="ビデオ"
             >
               <template slot-scope="scope">
                 <div>
@@ -61,7 +61,7 @@
             <el-table-column
               v-if="type == 'Picture'"
               align="center"
-              label="Picture"
+              label="写真"
             >
               <template slot-scope="scope">
                 <div>
@@ -204,7 +204,7 @@
             <el-table-column
               v-if="type == 'Video'"
               align="center"
-              label="Video"
+              label="ビデオ"
             >
               <template slot-scope="scope">
                 <div>
@@ -234,7 +234,7 @@
             <el-table-column
               v-if="type == 'Picture'"
               align="center"
-              label="Picture"
+              label="写真"
             >
               <template slot-scope="scope">
                 <div>
@@ -270,7 +270,7 @@
               </template>
             </el-table-column>
 
-            <el-table-column label="Visibility" width="100">
+            <el-table-column label="利用可" width="100">
               <template slot-scope="{ row }">
                 <i v-if="row.status == 'Private'" class="el-icon-view"></i>
                 <i
@@ -299,7 +299,7 @@
                 <span
                   v-if="scope.row.status == 'Private'"
                   style="font-size: 11px; line-height: 8px"
-                  >変更</span
+                  >未公開</span
                 >
                 <span
                   v-if="scope.row.status == 'Draft'"

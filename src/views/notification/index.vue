@@ -125,7 +125,7 @@
               icon="el-icon-upload2"
               @click="handleCreate"
             >
-              New
+              新規追加
             </el-button></el-col
           >
         </el-row>
@@ -148,7 +148,7 @@
               align="center"
               label="ID"
               width="65"
-              element-loading-text="请给我点时间！"
+              element-loading-text="確認中"
             >
               <template slot-scope="scope">
                 <span>{{ scope.row.id }}</span>
@@ -158,7 +158,7 @@
             <el-table-column
               v-if="type == 'Video'"
               align="center"
-              label="Video"
+              label="ビデオ"
             >
               <template slot-scope="scope">
                 <div>
@@ -188,7 +188,7 @@
             <el-table-column
               v-if="type == 'Picture'"
               align="center"
-              label="Picture"
+              label="写真"
             >
               <template slot-scope="scope">
                 <div>
@@ -214,7 +214,7 @@
               </template>
             </el-table-column>
 
-            <el-table-column align="left" label="Notification">
+            <el-table-column align="left" label="通知">
               <template slot-scope="{ row }">
                 <span style="font-size: 14px; font-weight: normal">{{
                   row.content
@@ -231,7 +231,7 @@
               </template>
             </el-table-column>
 
-            <el-table-column width="180px" align="left" label="Date">
+            <el-table-column width="180px" align="left" label="削除">
               <template slot-scope="scope">
                 <span style="font-size: 14px; font-weight: normal"
                   >{{ scope.row.date_time }} 12:31:30</span
@@ -239,14 +239,14 @@
               </template>
             </el-table-column>
 
-            <el-table-column align="center" label="User Id" width="90">
+            <el-table-column align="center" label="ユーザー Id" width="90">
               <template slot-scope="scope">
                 <span>{{ scope.row.views }}</span>
               </template>
             </el-table-column>
 
             <el-table-column
-              label="Action"
+              label="操作"
               fixed="right"
               width="180"
               align="center"

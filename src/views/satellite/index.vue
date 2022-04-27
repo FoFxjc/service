@@ -1,6 +1,6 @@
 <template>
   <div class="app-container">
-    <el-card class="box-card">Satellite List </el-card>
+    <el-card class="box-card">衛星一覧表</el-card>
 
     <el-row :gutter="20">
       <el-col :span="6" v-for="item in list" :key="item.id">
@@ -52,7 +52,7 @@
                     <el-button type="text">{{ item.api_url }}</el-button>
                   </p>
                   <p>
-                    <span style="font-weight: bold"> Status: </span>
+                    <span style="font-weight: bold"> 状態: </span>
                     <el-tag v-if="item.status == 'Online'">
                       {{ item.status }}
                     </el-tag>

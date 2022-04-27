@@ -15,17 +15,17 @@
                 font-size: 16px;
               "
             >
-              Basic Info
+              基本情報
             </p>
             <el-divider></el-divider>
-            <el-form-item label="Title" style="width: 80%">
+            <el-form-item label="タイトル" style="width: 80%">
               <el-input v-model="form.name" />
             </el-form-item>
-            <el-form-item label="Description" style="width: 80%">
+            <el-form-item label="概要" style="width: 80%">
               <el-input type="textarea" :rows="4" v-model="form.name">
               </el-input>
             </el-form-item>
-            <el-form-item label="Status">
+            <el-form-item label="状態">
               <el-select v-model="value">
                 <el-option
                   v-for="item in options"
@@ -40,8 +40,8 @@
             <el-form-item label="" style="width: 80%">
               <el-switch
                 v-model="value1"
-                active-text="Video"
-                inactive-text="Picture"
+                active-text="ビデオ"
+                inactive-text="写真"
               >
               </el-switch>
             </el-form-item>
@@ -58,9 +58,9 @@
               font-size: 16px;
             "
           >
-            Data Upload -
-            <span v-if="value1">Video</span>
-            <span v-else>Picture</span>
+            データアップロード -
+            <span v-if="value1">ビデオ</span>
+            <span v-else>写真</span>
           </p>
           <el-divider></el-divider>
           <div v-if="value1">
@@ -89,7 +89,7 @@
             </el-form-item>
           </div>
           <div v-else>
-            <el-form-item label="Video" style="width: 50%">
+            <el-form-item label="ビデオ" style="width: 50%">
               <el-upload
                 class="upload-demo"
                 :on-preview="handlePreview"
@@ -97,7 +97,7 @@
                 :file-list="fileList_picture"
                 list-type="picture"
               >
-                <el-button size="small" type="primary">Upload</el-button>
+                <el-button size="small" type="primary">アップロード</el-button>
                 <div slot="tip" class="el-upload__tip">
                   Only can upload .jpeg .png
                 </div>
@@ -118,7 +118,7 @@
               font-size: 16px;
             "
           >
-            Thumbnails Upload
+            概要図
           </p>
           <el-divider></el-divider>
           <div>
@@ -130,9 +130,9 @@
                 :file-list="fileList_picture"
                 list-type="picture"
               >
-                <el-button size="small" type="primary">Upload</el-button>
+                <el-button size="small" type="primary">アップロード</el-button>
                 <div slot="tip" class="el-upload__tip">
-                  Only can upload .jpeg .png
+                  拡張子対応 .jpeg .png
                 </div>
               </el-upload>
             </el-form-item>

@@ -1,24 +1,24 @@
 <template>
   <div class="app-container">
     <el-form ref="form" :model="form" label-width="180px">
-      <el-form-item label="Satellite name" style="width: 50%">
+      <el-form-item label="名前" style="width: 50%">
         <el-input v-model="form.name" />
       </el-form-item>
-      <el-form-item label="Satellite company" style="width: 50%">
+      <el-form-item label="社名" style="width: 50%">
         <el-input v-model="form.name" />
       </el-form-item>
-      <el-form-item label="Satellite company email" style="width: 50%">
+      <el-form-item label="メール" style="width: 50%">
         <el-input v-model="form.name" />
       </el-form-item>
-      <el-form-item label="Satellite API" style="width: 50%">
+      <el-form-item label="APIパス" style="width: 50%">
         <el-input v-model="form.name" />
       </el-form-item>
-      <el-form-item label="Satellite API Token" style="width: 50%">
+      <el-form-item label="API Token" style="width: 50%">
         <el-input v-model="form.name" />
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="onSubmit">Create</el-button>
-        <el-button @click="onCancel">Cancel</el-button>
+        <el-button type="primary" @click="onSubmit">作成</el-button>
+        <el-button @click="onCancel">キャンセル</el-button>
       </el-form-item>
     </el-form>
   </div>
