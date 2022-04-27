@@ -144,12 +144,12 @@ export const constantRoutes = [
         component: () => import("@/views/table/index"),
         meta: { title: "一覧表", icon: "table" },
       },
-      // {
-      //   path: "tree",
-      //   name: "Add Account",
-      //   component: () => import("@/views/form/index"),
-      //   meta: { title: "新規アカウント", icon: "form" },
-      // },
+      {
+        path: "tree",
+        name: "Add Account",
+        component: () => import("@/views/form/index"),
+        meta: { title: "新規アカウント", icon: "form" },
+      },
     ],
   },
 
