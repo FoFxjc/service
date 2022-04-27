@@ -10,7 +10,16 @@ const data = Mock.mock({
       company_name: function () {
         return Random.first() + " Ltd.";
       },
-      email: "@email",
+      "email|1": [
+        "e.nvdpgf@gqhx.zm",
+        "j.lbthdhd@hgkvx.bi",
+        "q.hbrs@kcgpgwhv.bd",
+        "n.fmmtqvpwm@hvbxtx.l",
+        "e.nvdpgf@gqhx.zm",
+        "j.lbthdhd@hgkvx.bi",
+        "q.hbrs@kcgpgwhv.bd",
+        "n.fmmtqvpwm@hvbxtx.l",
+      ],
       api_url: "@url",
       "fromNowOn|+1": 1,
       "now|+1": '@now("yyyy-MM-dd")',
