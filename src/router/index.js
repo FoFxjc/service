@@ -74,6 +74,12 @@ export const constantRoutes = [
       //   meta: { title: "一覧表", icon: "table" },
       // },
       {
+        path: "calender",
+        name: "calender",
+        component: () => import("@/views/shootingplan/index"),
+        meta: { title: "calender", icon: "form" },
+      },
+      {
         path: "tree",
         name: "Add Company",
         component: () => import("@/views/satelliteCompany/form1"),
@@ -174,8 +180,6 @@ export const constantRoutes = [
       },
     ],
   },
-
-
 
   {
     path: "/satellite",
