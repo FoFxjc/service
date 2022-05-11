@@ -6,17 +6,7 @@
       shadow="hover"
     >
       <el-input
-        placeholder="メールアドレス"
-        style="margin-right: 10px; width: 200px"
-        class="filter-item"
-      />
-      <el-input
-        placeholder="アカウント区分"
-        style="margin-right: 10px; width: 200px"
-        class="filter-item"
-      />
-      <el-input
-        placeholder="登録期間"
+        placeholder="企業グループ"
         style="margin-right: 10px; width: 200px"
         class="filter-item"
       />
@@ -38,6 +28,16 @@
         @click="handleFilter"
       >
         メール通知
+      </el-button>
+      <el-button
+        align="center"
+        v-waves
+        class="filter-item"
+        type="primary"
+        style="margin-left: 10px; float: right"
+        @click="handleFilter"
+      >
+        作成
       </el-button>
 
     </el-card>
