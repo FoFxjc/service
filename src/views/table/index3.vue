@@ -6,7 +6,17 @@
       shadow="hover"
     >
       <el-input
-        placeholder="企業グループ"
+        placeholder="メールアドレス"
+        style="margin-right: 10px; width: 200px"
+        class="filter-item"
+      />
+      <el-input
+        placeholder="権限"
+        style="margin-right: 10px; width: 200px"
+        class="filter-item"
+      />
+      <el-input
+        placeholder="登録期間"
         style="margin-right: 10px; width: 200px"
         class="filter-item"
       />
@@ -18,26 +28,6 @@
         @click="handleFilter"
       >
         検索
-      </el-button>
-      <el-button
-        align="center"
-        v-waves
-        class="filter-item"
-        type="primary"
-        style="margin-left: 10px; float: right"
-        @click="handleFilter"
-      >
-        メール通知
-      </el-button>
-      <el-button
-        align="center"
-        v-waves
-        class="filter-item"
-        type="primary"
-        style="margin-left: 10px; float: right"
-        @click="handleFilter"
-      >
-        作成
       </el-button>
 
     </el-card>
@@ -58,46 +48,36 @@
           {{ scope.$index }}
         </template>
       </el-table-column>
-      <el-table-column label="企業グループ" align="center">
+      <el-table-column label="メールアドレス" align="center">
         <template slot-scope="scope">
           <span>{{ scope.row.email }}</span>
         </template>
       </el-table-column>
-      <el-table-column label="グループアカウント代表者" align="center">
+      <el-table-column label="権限" align="center">
         <template slot-scope="scope">
-          {{ scope.row.email }}
+          システム運用
         </template>
       </el-table-column>
-      <!-- <el-table-column
-        class-name="status-col"
-        label="支払"
-        width="110"
-        align="center"
-      >
-        <template slot-scope="scope">
-          <el-tag :type="scope.row.payment | statusFilter">{{
-            scope.row.payment
-          }}</el-tag>
-        </template>
-      </el-table-column> -->
+
       <el-table-column
         align="center"
         prop="created_at"
-        label="ユーザー数"
+        label="企業グループ"
         width="200"
       >
         <template slot-scope="scope">
-          <span>１</span>
+          <span>XXXXX</span>
+        </template>
+      </el-table-column>
+      <el-table-column label="登録日" align="center">
+        <template slot-scope="scope">
+          <i class="el-icon-time" />
+          <span>{{ scope.row.register_time }}</span>
         </template>
       </el-table-column>
       <el-table-column label="操作" width="300" align="center">
         <template slot-scope="scope">
            <el-button size="mini" type="info">詳細</el-button>
-          <el-button @click="handleClick(scope.row)" size="mini" type="info"
-            >コンテンツ</el-button
-          >
-          <!-- <el-button size="mini" type="danger">削除</el-button>
-          <el-button size="mini" type="warning">パスワード変更</el-button> -->
         </template>
       </el-table-column>
     </el-table>

@@ -160,13 +160,13 @@ export const constantRoutes = [
       {
         path: "table2",
         name: "Table",
-        component: () => import("@/views/table/index"),
+        component: () => import("@/views/table/index2"),
         meta: { title: "通知履歴", icon: "table" },
       },
       {
         path: "table3",
         name: "Table",
-        component: () => import("@/views/table/index"),
+        component: () => import("@/views/table/index3"),
         meta: { title: "サービス運営者", icon: "table" },
       },
     ],
