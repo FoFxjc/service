@@ -25,7 +25,7 @@
         class="filter-item"
         type="primary"
         style="margin-left: 10px; float: right"
-        @click="handleFilter"
+        @click="handleEmailNotification"
       >
         メール通知
       </el-button>
@@ -35,11 +35,10 @@
         class="filter-item"
         type="primary"
         style="margin-left: 10px; float: right"
-        @click="handleFilter"
+        @click="handleCreate"
       >
         作成
       </el-button>
-
     </el-card>
     <el-table
       v-loading="listLoading"
@@ -49,10 +48,7 @@
       fit
       highlight-current-row
     >
-      <el-table-column
-      type="selection"
-      width="55">
-    </el-table-column>
+      <el-table-column type="selection" width="55"> </el-table-column>
       <el-table-column align="center" label="ID" width="95">
         <template slot-scope="scope">
           {{ scope.$index }}
@@ -92,7 +88,9 @@
       </el-table-column>
       <el-table-column label="操作" width="300" align="center">
         <template slot-scope="scope">
-           <el-button size="mini" type="info">詳細</el-button>
+          <el-button size="mini" type="info" @click="handleCompanyDetail"
+            >詳細</el-button
+          >
           <el-button @click="handleClick(scope.row)" size="mini" type="info"
             >コンテンツ</el-button
           >
@@ -134,6 +132,18 @@ export default {
         this.list = response.data.items;
         this.listLoading = false;
       });
+    },
+    handleCreate() {
+      this.$router.push("/example/table1/createcompany");
+    },
+    handleEmailNotification() {
+      this.$router.push("/example/table1/emailnotification");
+    },
+    handleCompanyDetail() {
+      this.$router.push("/example/table1/companydetail");
+    },
+    handleClick(row) {
+      this.$router.push("/example/table1/videodetail");
     },
   },
 };

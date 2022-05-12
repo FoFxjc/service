@@ -154,9 +154,47 @@ export const constantRoutes = [
       {
         path: "table1",
         name: "Table",
-        component: () => import("@/views/table/index1"),
+        component: () => import("@/views/table/companyindex"),
+        redirect: "/example/table1/list",
         meta: { title: "企業グループ", icon: "table" },
+        children: [
+          {
+            path: "list",
+            name: "list",
+            component: () => import("@/views/table/index1"),
+            meta: { title: "企業グループ", icon: "table", breadcrumb: false },
+          },
+          {
+            path: "createcompany",
+            name: "Createcompany",
+            hidden: true,
+            component: () => import("@/views/table/createcompany"),
+            meta: { title: "新規作成" },
+          },
+          {
+            path: "emailnotification",
+            name: "emailnotification",
+            hidden: true,
+            component: () => import("@/views/table/emailnotification"),
+            meta: { title: "邮件通知" },
+          },
+          {
+            path: "companydetail",
+            name: "companydetail",
+            hidden: true,
+            component: () => import("@/views/table/companydetail"),
+            meta: { title: "公司详情" },
+          },
+          {
+            path: "videodetail",
+            name: "videodetail",
+            hidden: true,
+            component: () => import("@/views/table/videodetail"),
+            meta: { title: "摄影详情" },
+          },
+        ],
       },
+
       {
         path: "table2",
         name: "Table",
@@ -228,18 +266,17 @@ export const constantRoutes = [
         path: "table",
         name: "Table",
         component: () => import("@/views/videoresouce/index"),
-        meta: { title: "データ取得管理", icon: "table" },
+        meta: { title: "一覧表", icon: "table" },
       },
       {
         path: "tree",
         name: "Video Detail",
         component: () => import("@/views/videoresouce/detail"),
-        meta: { title: "撮影データ", icon: "form" },
+        meta: { title: "撮影詳細", icon: "form" },
       },
     ],
   },
 
-  
   {
     path: "/satellite",
     component: Layout,
@@ -262,7 +299,6 @@ export const constantRoutes = [
     ],
   },
 
-    
   {
     path: "/satellite",
     component: Layout,

@@ -1,126 +1,74 @@
 <template>
-  <div class="app-container">
-    <el-card
-      :body-style="{ padding: '10px' }"
-      style="margin: 5px"
-      shadow="hover"
-    >
-      <el-input
-        placeholder="撮影日時"
-        style="margin-right: 10px; width: 200px"
-        class="filter-item"
-      />
-      <el-input
-        placeholder="衛星"
-        style="margin-right: 10px; width: 200px"
-        class="filter-item"
-      />
-      <el-input
-        placeholder="撮影枠ID"
-        style="margin-right: 10px; width: 200px"
-        class="filter-item"
-      />
-      <el-input
-        placeholder="種別"
-        style="margin-right: 10px; width: 200px"
-        class="filter-item"
-      />
-      <el-button
-        v-waves
-        class="filter-item"
-        type="primary"
-        icon="el-icon-search"
-        @click="handleFilter"
+  <div class="tab-container">
+    <!-- <el-tag>mounted times ：{{ createdTimes }}</el-tag>
+    <el-alert
+      :closable="false"
+      style="
+        width: 200px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 30px;
+      "
+      title="Tab with keep-alive"
+      type="success"
+    /> -->
+    <el-tabs v-model="activeName" type="card">
+      <el-tab-pane
+        v-for="item in tabMapOptions"
+        :key="item.key"
+        :label="item.label"
+        :name="item.label"
       >
-        検索
-      </el-button>
-
-
-    </el-card>
-    <el-table
-      v-loading="listLoading"
-      :data="list"
-      element-loading-text="Loading"
-      border
-      fit
-      highlight-current-row
-    >
-
-      <el-table-column align="center" label="ID" width="95">
-        <template slot-scope="scope">
-          {{ scope.$index }}
-        </template>
-      </el-table-column>
-      <el-table-column label="撮影日時" align="center">
-        <template slot-scope="scope">
-          <i class="el-icon-time" />
-          <span>{{ scope.row.register_time }}</span>
-        </template>
-      </el-table-column>
-      <el-table-column label="衛星" align="center">
-        <template slot-scope="scope">
-          Sphere1
-        </template>
-      </el-table-column>
-
-      <el-table-column label="撮影ID" align="center">
-        <template slot-scope="scope">
-          <span>{{ scope.$index }}</span>
-        </template>
-      </el-table-column>
-      <el-table-column label="種別" align="center">
-        <template slot-scope="scope">
-          動画
-        </template>
-      </el-table-column>
-
-      <el-table-column label="操作" width="300" align="center">
-        <template slot-scope="scope">
-           <el-button size="mini" type="info">詳細</el-button>
-        </template>
-      </el-table-column>
-    </el-table>
+        <keep-alive>
+          <tab-pane
+            v-if="activeName == item.key"
+            :type="item.label"
+            @create="showCreatedTimes"
+          />
+        </keep-alive>
+      </el-tab-pane>
+    </el-tabs>
   </div>
 </template>
 
 <script>
-import { getList } from "@/api/table";
+import TabPane from "./components/TabPane.vue";
 
 export default {
-  filters: {
-    statusFilter(status) {
-      const statusMap = {
-        Visa: "success",
-        MasterCard: "gray",
-        JCB: "danger",
-      };
-      return statusMap[status];
-    },
-  },
+  name: "Tab",
+  components: { TabPane },
   data() {
     return {
-      list: null,
-      listLoading: true,
+      tabMapOptions: [
+        { label: "Video", key: "Video" },
+        { label: "Picture", key: "Picture" },
+      ],
+      activeName: "Video",
+      createdTimes: 0,
     };
   },
+  watch: {
+    activeName(val) {
+      this.$router.push(`${this.$route.path}?tab=${val}`);
+    },
+  },
   created() {
-    this.fetchData();
+    // init the default selected tab
+    const tab = this.$route.query.tab;
+    if (tab) {
+      this.activeName = tab;
+    }
   },
   methods: {
-    fetchData() {
-      this.listLoading = true;
-      getList().then((response) => {
-        this.list = response.data.items;
-        this.listLoading = false;
-      });
+    showCreatedTimes() {
+      this.createdTimes = this.createdTimes + 1;
     },
   },
 };
 </script>
-<style lang="postcss">
-.box-card {
-  margin-bottom: 20px;
-  font-size: 20px;
-  font-weight: bold;
+
+<style scoped>
+.tab-container {
+  margin: 10px;
 }
 </style>
